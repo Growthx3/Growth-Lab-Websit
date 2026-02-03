@@ -52,13 +52,13 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 1 }}
-                    className="mt-12 flex flex-col md:flex-row gap-6 justify-center items-center"
+                    className="mt-12 flex justify-center items-center"
                 >
-                    <button className="px-8 py-4 bg-cyan-600 hover:bg-cyan-500 text-white font-bold rounded-full transition-all shadow-[0_0_20px_rgba(8,145,178,0.5)] hover:shadow-[0_0_40px_rgba(8,145,178,0.7)]">
+                    <button
+                        onClick={() => window.dispatchEvent(new CustomEvent("open-contact-form"))}
+                        className="px-12 py-5 bg-cyan-600 hover:bg-cyan-500 text-white font-black rounded-full transition-all shadow-[0_0_30px_rgba(8,145,178,0.5)] hover:shadow-[0_0_50px_rgba(8,145,178,0.8)] hover:scale-105 uppercase tracking-widest text-sm"
+                    >
                         Start Implementation
-                    </button>
-                    <button className="px-8 py-4 border border-white/20 hover:border-white/50 text-white font-bold rounded-full backdrop-blur-sm transition-all">
-                        Explore The Lab
                     </button>
                 </motion.div>
             </div>

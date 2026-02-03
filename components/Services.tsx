@@ -56,7 +56,8 @@ export default function Services() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className={`p-1 rounded-2xl bg-gradient-to-b from-white/10 to-white/5 hover:from-cyan-500/50 hover:to-purple-500/50 transition-all duration-500 group ${idx === 0 || idx === 1 ? 'lg:col-span-1' : ''}`}
+                            onClick={() => window.dispatchEvent(new CustomEvent("open-contact-form", { detail: { subject: service.title } }))}
+                            className={`p-1 rounded-2xl bg-gradient-to-b from-white/10 to-white/5 hover:from-cyan-500/50 hover:to-purple-500/50 transition-all duration-500 group cursor-pointer ${idx === 0 || idx === 1 ? 'lg:col-span-1' : ''}`}
                         >
                             <div className="bg-black/90 h-full rounded-xl p-8 flex flex-col relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all duration-500" />
@@ -71,7 +72,7 @@ export default function Services() {
                                 </p>
 
                                 <div className="flex items-center text-cyan-500 text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300">
-                                    Learn more <ArrowRight className="w-4 h-4 ml-2" />
+                                    Get Started <ArrowRight className="w-4 h-4 ml-2" />
                                 </div>
                             </div>
                         </motion.div>
