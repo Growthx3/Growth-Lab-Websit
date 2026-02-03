@@ -38,10 +38,10 @@ export default function About() {
                             </span>
                         </h3>
                         <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                            We specialize in helping sales teams and CEOs conquer new markets and achieve sustainable, scalable growth.
+                            Sustainable growth requires a new blueprint. At Growth³ Lab, we analyze and dismantle traditional organizational hurdles to create an AI-first structure.
                         </p>
                         <p className="text-gray-400 text-lg leading-relaxed">
-                            Our mission is to empower businesses with growth strategies, sales know-how, and the AI-powered infrastructure they need to thrive in dynamic industries. We combine classic growth advisory with embedded AI agents that transform how work gets done day to day.
+                            By combining deep growth advisory with autonomous AI agents, we empower businesses to move beyond classic strategy into a future of embedded intelligence.
                         </p>
                     </div>
                     <div className="relative">
