@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google"; // Using Inter for "Ultra-clean" look
+import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
@@ -19,6 +20,22 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PMB8RN2CLJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PMB8RN2CLJ');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} antialiased selection:bg-cyan-500/30`}>
         {children}
         {gaId && <GoogleAnalytics gaId={gaId} />}
